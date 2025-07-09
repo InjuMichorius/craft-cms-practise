@@ -1,0 +1,26 @@
+@use "../mq" as mq;
+
+.featured-news {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+
+  &__header {
+    padding: 0 0.5rem;
+  }
+
+  &__list {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    list-style-type: none;
+    padding: 0;
+
+    @include mq.mq(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq.mq(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

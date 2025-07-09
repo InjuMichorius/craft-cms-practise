@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Zorgvandaag{% endblock %}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  {% include '_partials/header.twig' %}
+  
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  
+  {% include '_partials/footer.twig' %}
+</body>
+</html>

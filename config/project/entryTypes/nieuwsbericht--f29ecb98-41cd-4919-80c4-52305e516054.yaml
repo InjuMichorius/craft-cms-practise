@@ -1,0 +1,121 @@
+color: null
+description: null
+fieldLayouts:
+  1c20a14e-ea6e-47ae-9c5c-cfc727c0548a:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-07T19:39:42+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c260cbce-43bf-4a22-b3b5-4776bf627cd1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-07T19:52:01+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 4f6d83f8-5622-476c-bac5-86a053b1a1ee # Nieuws excerpt
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 40ab08da-0855-435c-8e97-58ac00f2f49d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-07T19:55:53+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 970ced3b-7c54-4711-a53a-f13badec329f # Nieuws afbeeldingen
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cadd5ed-f642-47cb-aa6d-8568619a2065
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-08T09:25:46+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: ed6e8c78-bd6d-45be-8d21-1467a8033ccb # Datum
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da1e0863-c581-4926-8e51-96b0071e8b33
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-08T09:25:46+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b58d63d1-9c55-442d-a8f2-358ed7295976 # Leestijd
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8e36d95-15c1-41ea-806e-362164ddd057
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 992d8a40-5164-4658-b694-8f889f1567b3
+        userCondition: null
+handle: nieuwsbericht
+hasTitleField: true
+icon: null
+name: Nieuwsbericht
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

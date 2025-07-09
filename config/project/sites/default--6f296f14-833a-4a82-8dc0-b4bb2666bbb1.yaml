@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'A&M Proefopdracht'
+primary: true
+siteGroup: 886ac1fd-4d2b-41a7-b98e-9c8489f8d095 # A&M Proefopdracht
+sortOrder: 1

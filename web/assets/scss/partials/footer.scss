@@ -1,0 +1,41 @@
+@use "../mq" as mq;
+
+.footer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2.5rem;
+    list-style: none;
+    flex-direction: row;
+    @include mq.mq-down(tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__item {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+
+  &__text {
+    color: #1d40b0;
+    margin: 0;
+    padding: 0;
+  }
+}

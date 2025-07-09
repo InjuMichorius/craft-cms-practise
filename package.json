@@ -1,0 +1,16 @@
+{
+  "name": "craft-proefopdracht",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass web/assets/scss/main.scss web/assets/css/style.css",
+    "watch:css": "sass --watch web/assets/scss/main.scss:web/assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

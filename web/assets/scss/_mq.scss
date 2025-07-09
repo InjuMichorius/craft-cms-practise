@@ -1,0 +1,29 @@
+$breakpoints: (
+  desktop: 1024px,
+  tablet: 768px,
+  mobile: 480px,
+);
+
+// min-width mixin
+@mixin mq($key) {
+  $value: map-get($breakpoints, $key);
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for breakpoint: `#{$key}`";
+  }
+}
+
+// max-width mixin
+@mixin mq-down($key) {
+  $value: map-get($breakpoints, $key);
+  @if $value {
+    @media (max-width: calc(#{$value} - 1px)) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for breakpoint: `#{$key}`";
+  }
+}

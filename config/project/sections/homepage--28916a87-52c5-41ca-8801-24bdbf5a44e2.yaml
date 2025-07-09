@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 6e97758f-917b-4201-9bb2-a1d37ed43388 # Homepage Entry
+handle: homepage
+maxAuthors: 1
+name: Homepage
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6f296f14-833a-4a82-8dc0-b4bb2666bbb1: # A&M Proefopdracht
+    enabledByDefault: true
+    hasUrls: true
+    template: homepage/_entry.twig
+    uriFormat: homepage
+type: single

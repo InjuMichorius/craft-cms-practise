@@ -1,0 +1,146 @@
+@use "../variables" as *;
+@use "../mq" as mq;
+@use "../mixins" as mixins;
+
+.news-item {
+  border-radius: 0.5rem;
+  border: 10px solid transparent;
+
+  &__link {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid $border-gray;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-family: Geologica;
+    font-size: 1.3rem;
+    @include mixins.truncate-lines(2);
+    margin-bottom: 0.5rem;
+  }
+
+  &__excerpt {
+    color: $dark-gray;
+    @include mixins.truncate-lines(3);
+  }
+
+  &__image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__meta {
+    position: relative;
+    order: -1;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 4px);
+      background-color: rgba(0, 0, 0, 0); // default
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-weight: 400;
+    color: $dark-blue;
+    background-color: $light-blue;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    z-index: 1;
+  }
+
+  &__icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    gap: 0.8rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: white;
+  }
+
+  &__readtime,
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 1rem;
+    transform: translateY(2rem); // default state for desktop
+    transition: transform 0.2s ease-in-out;
+    z-index: 1;
+  }
+
+  // Hover only on desktop
+  @include mq.mq(desktop) {
+    &:hover,
+    &__link:focus,
+    &__link:focus-visible {
+      .news-item__meta::after {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .news-item__image {
+        transform: scale(1.05);
+      }
+
+      .news-item__readtime,
+      .news-item__author {
+        transform: translateY(0);
+      }
+
+      .news-item__author {
+        transition-delay: 0.1s;
+      }
+    }
+    &:has(&__link:focus) {
+      border: 10px dashed $dark-blue;
+    }
+  }
+
+  // Show hover state because no hover
+  @include mq.mq-down(desktop) {
+    &__meta::after {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    &__image {
+      transform: scale(1.05);
+    }
+    &__readtime,
+    &__author {
+      transform: translateY(0);
+    }
+    &__author {
+      transition-delay: 0.1s;
+    }
+  }
+}

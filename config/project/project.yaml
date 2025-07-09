@@ -1,0 +1,43 @@
+dateModified: 1751966746
+email:
+  fromEmail: inju@hotmail.nl
+  fromName: 'A&M Proefopdracht'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  nieuwsAfbeeldingen:
+    hasUrls: true
+    name: 'Nieuws afbeeldingen'
+    settings:
+      path: '@webroot/assets/afbeeldingen'
+    type: craft\fs\Local
+    url: /assets/afbeeldingen/
+meta:
+  __names__:
+    4f6d83f8-5622-476c-bac5-86a053b1a1ee: 'Nieuws excerpt' # Nieuws excerpt
+    5aef9e29-e471-471d-8675-25aca8a98232: Nieuws # Nieuws
+    6e97758f-917b-4201-9bb2-a1d37ed43388: 'Homepage Entry' # Homepage Entry
+    6f296f14-833a-4a82-8dc0-b4bb2666bbb1: 'A&M Proefopdracht' # A&M Proefopdracht
+    8cc038b8-4c87-4879-893e-b9b3d544dd02: 'Nieuws afbeeldingen' # Nieuws afbeeldingen
+    886ac1fd-4d2b-41a7-b98e-9c8489f8d095: 'A&M Proefopdracht' # A&M Proefopdracht
+    970ced3b-7c54-4711-a53a-f13badec329f: 'Nieuws afbeeldingen' # Nieuws afbeeldingen
+    28916a87-52c5-41ca-8801-24bdbf5a44e2: Homepage # Homepage
+    a30fcecf-ce84-4a4f-a9ec-77194a3c8e06: 'Homepage tekst' # Homepage tekst
+    b58d63d1-9c55-442d-a8f2-358ed7295976: Leestijd # Leestijd
+    c42ceafd-2c48-4908-802e-4a8c4c52bfa2: Homepage # Homepage
+    c1798720-ff84-4691-823d-0e90536a1f9a: 'Homepage titel' # Homepage titel
+    e7388103-3da0-470b-b068-62bd131b67f7: 'Alt tekst' # Alt tekst
+    ed6e8c78-bd6d-45be-8d21-1467a8033ccb: Datum # Datum
+    f29ecb98-41cd-4919-80c4-52305e516054: Nieuwsbericht # Nieuwsbericht
+system:
+  edition: solo
+  live: true
+  name: 'A&M Proefopdracht'
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

@@ -1,0 +1,46 @@
+{% macro newsItem(news) %}
+  <article class="news-item">
+    <a href="#" class="news-item__link">
+    <div class="news-item__content">
+      <time class="news-item__date" datetime="{{ news.datum|date('Y-m-d') }}">
+        {{ news.datum|date('d-m-Y') }}
+      </time>
+
+      <h3 class="news-item__title">{{ news.title }}</h3>
+
+      <p class="news-item__excerpt">{{ news.nieuwsExcerpt ?? '' }}</p>
+    </div>
+
+    <div class="news-item__meta">
+      <p class="news-item__category">
+        <img src="/assets/icons/tag.svg" alt="" class="news-item__icon" aria-hidden="true" />
+        <span aria-label="Categorie">Leerzaam</span>
+      </p>
+
+      {% if news.nieuwsAfbeeldingen|length %}
+        {% set afbeelding = news.nieuwsAfbeeldingen.one() %}
+        <img 
+          class="news-item__image"
+          src="{{ afbeelding.url }}" 
+          alt="{{ afbeelding.alt is defined and afbeelding.alt ? afbeelding.alt : '' }}" 
+          width="400" 
+          height="300"
+        >
+      {% endif %}
+
+      <div class="news-item__info">
+        <div class="news-item__readtime">
+          <img src="/assets/icons/clock.svg" alt="" class="news-item__icon" aria-hidden="true" />
+          <time datetime="PT{{ news.leestijd }}M">
+            {{ news.leestijd }} minuten
+          </time>
+        </div>
+        <div class="news-item__author">
+          <img src="/assets/icons/author.svg" alt="" class="news-item__icon" aria-hidden="true" />
+          <span aria-label="Auteur">Inju Michorius</span>
+        </div>
+      </div>
+    </div>
+  </a>
+  </article>
+{% endmacro %}

@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+{% import "_macros/newsItem.twig" as newsItem %}
+
+{% set entry = craft.entries.section('homepage').one() %}
+{% block content %}
+
+{% set news = craft.entries.section('nieuws').limit(6).all() %}
+
+<section class="featured-news">
+  <header class="featured-news__header">
+    <h2>Laatste nieuws uit de zorg</h2>
+    <p>Blijf op de hoogte van de laatste ontwikkelingen binnen de zorgsector. Van innovaties in de ouderenzorg tot inspirerende verhalen van zorgprofessionals – ontdek wat er speelt in de wereld van zorg en welzijn.</p>
+  </header>
+  <ul class="featured-news__list">
+    {% for item in news %}
+    <li class="featured-news__item">
+      {{ newsItem.newsItem(item) }}
+    </li>
+  {% endfor %}
+  {% for item in news %}
+    <li class="featured-news__item">
+      {{ newsItem.newsItem(item) }}
+    </li>
+  {% endfor %}
+  {% for item in news %}
+    <li class="featured-news__item">
+      {{ newsItem.newsItem(item) }}
+    </li>
+  {% endfor %}
+  {% for item in news %}
+    <li class="featured-news__item">
+      {{ newsItem.newsItem(item) }}
+    </li>
+  {% endfor %}
+  {% for item in news %}
+    <li class="featured-news__item">
+      {{ newsItem.newsItem(item) }}
+    </li>
+  {% endfor %}
+  {% for item in news %}
+    <li class="featured-news__item">
+      {{ newsItem.newsItem(item) }}
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+{% endblock %}

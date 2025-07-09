@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: f29ecb98-41cd-4919-80c4-52305e516054 # Nieuwsbericht
+handle: nieuws
+maxAuthors: 1
+name: Nieuws
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6f296f14-833a-4a82-8dc0-b4bb2666bbb1: # A&M Proefopdracht
+    enabledByDefault: true
+    hasUrls: true
+    template: nieuws/_entry.twig
+    uriFormat: 'nieuws/{slug}'
+type: channel
